@@ -65,7 +65,7 @@ formDOM.addEventListener("submit", async (e) => {
     formAlertDOM.classList.add("text-success");
   } catch (error) {
     formAlertDOM.style.display = "block";
-    formAlertDOM.innerHTML = ` タスクの文字数は20文字以内で送信してください。`;
+    formAlertDOM.innerHTML = `無効です。もう一度試してください。`;
   }
   setTimeout(() => {
     formAlertDOM.style.display = "none";
