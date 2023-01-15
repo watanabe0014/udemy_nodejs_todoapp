@@ -15,7 +15,7 @@ app.use("/api/v1/tasks", taskRoute);
 const start = async () => {
     try{
         await connectDB(process.env.DEV_MONGO_URL || process.env.MONGODB_URI);
-        app.listen(PORT, () => {
+        app.listen(process.env.PORT || PORT, () => {
             console.log("mongo_todo_appのサーバーが起動しました");
         });
     } catch (err) {
