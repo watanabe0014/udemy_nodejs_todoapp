@@ -14,7 +14,7 @@ app.use("/api/v1/tasks", taskRoute);
 
 const start = async () => {
   try {
-    await connectDB(process.env.DEV_MONGO_URL || process.env.MONGODB_URI);
+    await connectDB(process.env.HEROKU_MONGO_URL || process.env.MONGO_URL);
     app.listen(PORT, console.log(`サーバーが起動しました`));
   } catch (error) {
     console.log(error);
