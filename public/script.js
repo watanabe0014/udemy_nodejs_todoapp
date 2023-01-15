@@ -9,7 +9,7 @@ const showTasks = async () => {
   loadingDOM.style.visibility = "visible";
   try {
     //自作のAPIを叩く
-    const { data: tasks } = await axios.get("/api/v1/tasks");
+    const { data: tasks } = await axios.get("/api/v1/tasks/");
     //タスクが１つもないとき
     if (tasks.length < 1) {
       tasksDOM.innerHTML = '<h5 class="empty-list">タスクがありません</h5>';
